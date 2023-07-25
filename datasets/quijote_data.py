@@ -144,7 +144,7 @@ class Quijote15kPointClouds(Uniform15KPC):
         self.display_axis_order = [0, 2, 1]
 
         super(Quijote15kPointClouds, self).__init__(
-            data, self.synset_ids,
+            data,
             tr_sample_size=tr_sample_size,
             te_sample_size=te_sample_size,
             split=split, scale=scale,
