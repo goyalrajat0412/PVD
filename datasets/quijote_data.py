@@ -24,7 +24,7 @@ class Uniform15KPC(Dataset):
         self.random_subsample = random_subsample
         self.input_dim = input_dim
         self.box_per_shape = box_per_shape
-        self.cate_idx_lst = []
+        #self.cate_idx_lst = []
         self.all_points = []
         for i in range(len(self.data)):
           point_cloud = self.data[i]
@@ -34,7 +34,7 @@ class Uniform15KPC(Dataset):
         # Shuffle the index deterministically (based on the number of examples)
         self.shuffle_idx = list(range(len(self.all_points)))
         random.Random(38383).shuffle(self.shuffle_idx)
-        self.cate_idx_lst = [self.cate_idx_lst[i] for i in self.shuffle_idx]
+        #self.cate_idx_lst = [self.cate_idx_lst[i] for i in self.shuffle_idx]
         self.all_points = [self.all_points[i] for i in self.shuffle_idx]
 
         # Normalization
