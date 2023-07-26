@@ -570,7 +570,7 @@ def train(gpu, opt, output_dir, noises_init):
 
 
     ''' data '''
-    train_dataset, _ = get_dataset(opt.data, opt.npoints, opt.category)
+    train_dataset, _ = get_dataset(opt.data, opt.npoints)
     dataloader, _, train_sampler, _ = get_dataloader(opt, train_dataset, None)
 
 
