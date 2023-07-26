@@ -786,7 +786,7 @@ def main():
 def parse_args():
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--data', default='/content/drive/MyDrive/Data/quijote15k.npy')
+    parser.add_argument('--data', default='/home/ppydj3/Quijote/quijote15k.npy') #'/content/drive/MyDrive/Data/quijote15k.npy' for colab
     parser.add_argument('--category', default='chair')
 
     parser.add_argument('--bs', type=int, default=16, help='input batch size')
