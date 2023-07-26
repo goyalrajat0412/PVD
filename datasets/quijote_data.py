@@ -113,15 +113,14 @@ class Uniform15KPC(Dataset):
         te_out = torch.from_numpy(te_out[te_idxs, :]).float()
 
         m, s = self.get_pc_stats(idx)
-        cate_idx = self.cate_idx_lst[idx]
-        sid, mid = self.all_cate_mids[idx]
+        #cate_idx = self.cate_idx_lst[idx]
+        #sid, mid = self.all_cate_mids[idx]
 
         out = {
             'idx': idx,
             'train_points': tr_out,
             'test_points': te_out,
-            'mean': m, 'std': s, 'cate_idx': cate_idx,
-            'sid': sid, 'mid': mid
+            'mean': m, 'std': s
         }
 
         return out
