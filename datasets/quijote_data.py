@@ -9,7 +9,7 @@ import numpy as np
 import torch.nn.functional as F
 
 class Uniform15KPC(Dataset):
-    def __init__(self, data="/content/drive/MyDrive/Data/quijote15k.npy", tr_sample_size=524,
+    def __init__(self, data="/home/ppydj3/Quijote/quijote15k.npy", tr_sample_size=524, #/content/drive/MyDrive/Data/quijote15k.npy for colab
                  te_sample_size=0, split='train', scale=1.,
                  normalize_per_shape=False, box_per_shape=False,
                  random_subsample=False,
@@ -127,7 +127,7 @@ class Uniform15KPC(Dataset):
 
 
 class Quijote15kPointClouds(Uniform15KPC):
-    def __init__(self, data="/content/drive/MyDrive/Data/quijote15k.npy",
+    def __init__(self, data="/home/ppydj3/Quijote/quijote15k.npy", #check above for colab
                  tr_sample_size=524, te_sample_size=0,
                  split='train', scale=1., normalize_per_shape=False,
                  normalize_std_per_axis=False, box_per_shape=False,
